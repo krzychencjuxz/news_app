@@ -1,0 +1,52 @@
+/* FormPage.css */
+
+.FormPage {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .Form-header {
+    background-color: #eee;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(16px + 2vmin);
+    color: #333;
+  }
+  
+  .Form-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  input,
+  textarea,
+  button {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #038383;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #001aff;
+  }
+  

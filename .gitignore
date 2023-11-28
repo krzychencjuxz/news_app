@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/public/json_static
+# /public/json_static
 /TestNewsApp
 .idea
 

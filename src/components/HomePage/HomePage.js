@@ -4,20 +4,22 @@ import './HomePage.css';
 import NewsList from '../NewsList/NewsList.js';
 
 function HomePage() {
-	const endpoint = '/public/json_static/menu.json'
+	const endpoint = '/json_static/menu.json'
   const [menuItems, setMenuItems] = useState([]);
   // Hook efektu do ładowania danych menu z pliku JSON przy pierwszym renderowaniu
   useEffect(() => {
     fetch(endpoint) // Ścieżka do pliku JSON
       .then(response => response.json()) // Parsowanie odpowiedzi jako JSON
-      .then(data => setMenuItems(data)) // Aktualizacja stanu menuItems danymi z JSON
+      .then(data => setMenuItems(data)
+			) // Aktualizacja stanu menuItems danymi z JSON
       .catch(error => console.error("Fetching menu failed:", error));
   }, []); // Pusta tablica jako drugi argument oznacza, że efekt uruchomi się tylko raz
-
+	
   return (
     <div className="HomePage">
       <header className="HomePage-header">
         <img src={logo} className="HomePage-logo" alt="logo" />
+				
         <ul>
           {menuItems.map((item, index) => (
             // Tworzenie listy elementów menu
@@ -29,6 +31,7 @@ function HomePage() {
           ))}
         </ul>
       </header>
+			<h1>Lista newsów</h1>
       <main>
         <NewsList />
         {/* Możesz dodać więcej komponentów NewsItem tutaj <h1>{NewsItem.key}</h1> nie dziala ;/ */}

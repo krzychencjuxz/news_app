@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamiczna Tabela</title>
+    <style>
+        /* Tu możesz dodać własne style dla tabeli */
+        .table-header {
+            background-color: #f2f2f2;
+            /* inne style dla nagłówka */
+        }
+        .table-column {
+            min-width: 50px;
+        }
+    </style>
+</head>
+<body>
+	<!-- Tabela, do której dodamy dynamicznie nagłówek i wiersze -->
+	<table id="tableId">
+			<!-- Miejsce na nagłówek tabeli -->
+			<!-- Miejsce na wiersze danych -->
+	</table>
+  <script>
+
+		// Funkcja do tworzenia nagłówka tabeli
+		function createTableHeader(data) {
+				if (!data || !data.length) return;
+
+				const table = document.getElementById('tableId');
+				const thead = document.createElement('thead');
+				thead.className = 'table-header'; // Dodawanie klasy
+
+				const tr = document.createElement('tr');
+
+				// Używamy kluczy z pierwszego elementu danych JSON jako nazw kolumn
+				Object.keys(data[0]).forEach(key => {
+						const th = document.createElement('th');
+						th.textContent = key;
+						th.className = 'table-column'; // Dodawanie klasy
+						tr.appendChild(th);
+				});
+
+				thead.appendChild(tr);
+				table.appendChild(thead);
+		}
+
+		// Przykładowe dane JSON
+		const data = [
+			{"ID": 50, "Field": "translation_p", "Type": "2", "Title": "acs-subsite.Order_translation", "Req": "f", "Width": "0", "ID conn": "0", "Hidden": "f", "Max char": 0, "DataType": "char", "Js Bu Pe Au Jo BS Ac": [ "X", "X", "X", "X", "X", "X", "X" ], "Sort": 50, "Lang": null, "Group": 0, "GroupSort": 0}, 
+			{"ID": 48, "Field": "english_p", "Type": "2", "Title": "acs-subsite.Other_version", "Req": "f", "Width": "0", "ID conn": "0", "Hidden": "f", "Max char": 0, "DataType": "char", "Js Bu Pe Au Jo BS Ac": [ "X", "X", "X", "X", "X", "X", "X" ], "Sort": 50, "Lang": null, "Group": 0, "GroupSort": 0}, 
+			{"ID": 25, "Field": "category_id", "Type": "4", "Title": "acs-subsite.Category", "Req": "t", "Width": "0", "ID conn": "0", "Hidden": "f", "Max char": 0, "DataType": "int", "Js Bu Pe Au Jo BS Ac": [ "O", "O", "O", "X", "O", "O", "O" ], "Sort": 9, "Lang": null, "Group": 10, "GroupSort": 0}
+		]
+
+		// Wywołanie funkcji
+		createTableHeader(data);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+	background-color: #222;
+	font-size: small;
+	font-size: calc(10px + 0.5vmin);
+}
+textarea {
+	width: 90vw !important;
+	height: 30vh !important;
+	background-color: #222;
+	color: antiquewhite;
+  margin: 0px auto 15px auto;
+	font-size: calc(10px + 0.5vmin);
+}

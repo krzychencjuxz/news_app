@@ -1,0 +1,10 @@
+<html>
+	<head></head>
+	<body>
+		<pre><code id="json-container"></code></pre>
+		<script>
+			const data = [{"ID": 50, "Field": "translation_p", "Type": {2, "chaeckbox"}, "Title": "acs-subsite.Order_translation", "Req": "f", "Width": "0", "ID conn": "0", "Hidden": "f", "Max char": 0, "DataType": "char", "ExistIn": ["jobseekers": true, "business": true, "personals": true, "automotive": true, "jobs": true, "buysell": true, "accommodation": true], "Sort": 50, "Lang": " ", "Group": 0, "GroupSort": 0}, {"ID": 48, "Field": "english_p", "Type": {2, "chaeckbox"}, "Title": "acs-subsite.Other_version", "Req": "f", "Width": "0", "ID conn": "0", "Hidden": "f", "Max char": 0, "DataType": "char", "ExistIn": ["jobseekers": true, "business": true, "personals": true, "automotive": true, "jobs": true, "buysell": true, "accommodation": true], "Sort": 50, "Lang": " ", "Group": 0, "GroupSort": 0}, {"ID": 25, "Field": "category_id", "Type": {4, "select"}, "Title": "acs-subsite.Category", "Req": "t", "Width": "0", "ID conn": "0", "Hidden": "f", "Max char": 0, "DataType": "int", "ExistIn": ["jobseekers": false, "business": false, "personals": false, "automotive": true, "jobs": false, "buysell": false, "accommodation": false], "Sort": 9, "Lang": " ", "Group": 10, "GroupSort": 0}]
+			document.getElementById('json-container').innerHTML = JSON.stringify(data, null, 2);
+		</script>
+	</body>
+</html>

@@ -1,5 +1,6 @@
 [
   { "name": "Strona główna", "url": "/" },
   { "name": "O nas", "url": "/about" },
-  { "name": "Kontakt", "url": "/contact" }
+  { "name": "Kontakt", "url": "/contact" },
+  { "name": "Json Pretty", "url": "/PrettyJson" }
 ]

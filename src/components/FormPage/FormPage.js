@@ -28,20 +28,6 @@ function FormPage() {
       .catch(error => console.error("Fetching categories failed:", error));
   }, []);
 
-  useEffect(() => {
-    if (selectedCategory) {
-      let category_file_name = "form-fields-" + selectedCategory.toLowerCase() + ".json";
-      console.log("Nazwa pliku category", category_file_name)
-      fetch(`/json_static/${category_file_name}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log("Dane z pliku categories", data)
-          setFormFields(data)
-        })
-        .catch(error => console.error(`Fetching ${selectedCategory.toLowerCase()} form failed:`, error));
-    }
-  }, [selectedCategory]);
-
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
